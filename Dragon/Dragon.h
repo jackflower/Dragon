@@ -1,4 +1,4 @@
-//  ___________________________________
+﻿//  ___________________________________
 // | Dragon.h - class definition       |
 // | SCI - April 2020                  |
 // |___________________________________|
@@ -18,6 +18,22 @@ public:
 	///Konstruktor
 	///
 	Dragon();
+
+	///
+	///Konstruktor kopiujący
+	///
+	///@param copy - stała referencja na obiekt klasy Dragon
+	///
+	Dragon(const Dragon & copy);
+
+	///
+	///Konstruktor parametryczny
+	///
+	///@param position_x - wartość współrzędnej x
+	///
+	///@param position_y - wartość współrzędnej y
+	///
+	Dragon(float position_x, float position_y);
 
 	///
 	///Destruktor

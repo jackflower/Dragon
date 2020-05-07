@@ -8,6 +8,9 @@
 #ifndef H_CHARACTER_SCI
 #define H_CHARACTER_SCI
 
+#define x get_X()
+#define y get_Y()
+
 ///
 ///Klasa reprezentuje postać
 ///
@@ -21,9 +24,35 @@ public:
 	Character();
 
 	///
+	///Konstruktor kopiujący
+	///
+	///@param copy - stała referencja na obiekt klasy Character
+	///
+	Character(const Character & copy);
+
+	///
+	///Konstruktor parametryczny
+	///
+	///@param position_x - wartość współrzędnej x
+	///
+	///@param position_y - wartość współrzędnej y
+	///
+	Character(float position_x, float position_y);
+
+	///
 	///Destruktor wirtualny
 	///
 	virtual ~Character();
+
+	///
+	///Metoda zwraca pozycję x postaci
+	///
+	const float get_X() const;
+
+	///
+	///Metoda zwraca pozycję y postaci
+	///
+	const float get_Y() const;
 
 	///
 	///Metoda ustawia pozycję postaci
@@ -43,10 +72,10 @@ public:
 	///
 	const float getDistanceToTarget(float target_x, float target_y);
 
-	float x;//pozycja postaci - współrzędna osi x
-	float y;//pozycja postaci - współrzędna osi y
-
 protected:
+
+	float position_x;//pozycja postaci - współrzędna osi x
+	float position_y;//pozycja postaci - współrzędna osi y
 
 private:
 
